@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const leadersRouter = express.Router();
+const leaderRouter = express.Router();
 
-leadersRouter.use(bodyParser.json());
+leaderRouter.use(bodyParser.json());
 
-leadersRouter.route('/')
+leaderRouter.route('/')
 .all((req,res,next) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -26,7 +26,7 @@ leadersRouter.route('/')
 });
 
 
-leadersRouter.route('/:leaderId')
+leaderRouter.route('/:leaderId')
 .all((req,res,next) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
@@ -49,4 +49,4 @@ leadersRouter.route('/:leaderId')
 });
 
 
-module.exports = leadersRouter;
+module.exports = leaderRouter;

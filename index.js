@@ -6,13 +6,13 @@ const port = 3000;
 
 const app = express();
 
-const promotionRoute = require('./routes/promotions_routes');
-const leadersRoute = require('./routes/leaders_routes');
+const promoRouter = require('./routes/promotions_routes');
+const leaderRouter = require('./routes/leaders_routes');
 const dishesRouter = require('./routes/dishes_routes');
 
 
-app.use('/promotions', promotionRoute);
-app.use('/leaders', leadersRoute);
+app.use('/promotions', promoRouter);
+app.use('/leaders', leaderRouter);
 app.use('/dishes', dishesRouter);
 
  app.use((req, res, next) => {
